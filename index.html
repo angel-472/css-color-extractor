@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> <!--icon library-->
+    <script src="script.js" defer></script>
+    <title>CSS Color Extractor</title>
+  </head>
+
+  <body>
+    <main id="container">
+      <h1 id="title">CSS Color Tool</h1>
+      <textarea id="txt-css" placeholder="Paste your css here"></textarea>
+      <div id="colors">
+        <div class="color">
+          <div class="color-display" style="background-color: #4ade80;"></div>
+          <p class="color-name">#4ade80</p>
+          <button class="button color-change">Replace</button>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <i class="fa-brands fa-github"></i>
+      <a href="https://github.com/angel-472" target="_blank">github.com/angel-472</a>
+      <style media="screen">
+          #footer {
+          padding: 1em;
+          color: #d4d4d8;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+        }
+
+        #footer a {
+          color: #d4d4d8;
+          text-decoration: none;
+        }
+      </style>
+    </footer>
+  </body>
+</html>
