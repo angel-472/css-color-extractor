@@ -1,5 +1,6 @@
 const txtCss = document.getElementById("txt-css");
 const colorsContainer = document.getElementById("colors");
+const btnCopyCSS = document.getElementById("copy-css");
 
 txtCss.addEventListener('input', () => {
   updateColors();
@@ -68,4 +69,9 @@ document.addEventListener('change', ({ target }) => {
     let newColor = target.value;
     replaceColor(oldColor,newColor);
   }
+});
+
+btnCopyCSS.addEventListener('click', () => {
+  alert('CSS Copied!');
+  navigator.clipboard.writeText(txtCss.value);
 });
