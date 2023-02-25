@@ -118,6 +118,13 @@ input[type="color"]::-webkit-color-swatch {
   border: none;
 }
 
+#no-colors {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  color: #d4d4d8;
+}
+
 /* mobile */
 @media only screen and (max-width: 768px) {
 

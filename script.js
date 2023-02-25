@@ -18,11 +18,14 @@ function updateColors(){
   }
   console.log(colors);
 
-  colorsContainer.innerHTML = '';
+  while(colorsContainer.lastElementChild.id !== "no-colors"){
+    colorsContainer.lastElementChild.remove();
+  }
   colors.forEach((color) => {
     let element = getColorElement(color);
     colorsContainer.appendChild(element);
   });
+  updateNoColors();
 }
 
 function findColors(str) {
@@ -58,7 +61,7 @@ document.addEventListener('click', ({ target }) => {
       target.innerText = copiedText;
       setTimeout(() => {
         target.innerText = value;
-      }, 2000);
+      }, 1200);
     }
   }
 });
@@ -75,3 +78,19 @@ btnCopyCSS.addEventListener('click', () => {
   alert('CSS Copied!');
   navigator.clipboard.writeText(txtCss.value);
 });
+
+//no colors
+let noColors = true;
+const divNoColors = document.getElementById("no-colors");
+setInterval(() => {
+  updateNoColors();
+}, 100);
+
+function updateNoColors(){
+  if(colorsContainer.lastElementChild == divNoColors && divNoColors.style.display !== 'flex'){
+    divNoColors.style.display = 'flex';
+  }
+  else if(colorsContainer.lastElementChild !== divNoColors && divNoColors.style.display !== 'none') {
+    divNoColors.style.display = 'none';
+  }
+}
